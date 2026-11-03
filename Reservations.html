@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu mesa | Sazones del Mundo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .reserva-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+        .reserva-container h1 {
+            color: #631728;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #631728;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .seccion-reserva {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+        }
+
+        .seccion-reserva h3 {
+            color: #631728;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .grid-formulario {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .campo-full {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 11px 15px;
+            border: 1px solid #dfd1c3;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #fff;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .info-reserva {
+            background: #fff8dc;
+            border-left: 4px solid #b86835;
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .resumen {
+            margin-top: 30px;
+            text-align: right;
+        }
+
+        .btn-reservar {
+            display: inline-block;
+            background: #631728;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .reserva-container {
+                padding: 20px;
+            }
+
+            .grid-formulario {
+                grid-template-columns: 1fr;
+            }
+
+            .campo-full {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="Index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" width="20" height="20">
+                        <path d="M11 1v6a3.8 3.8 0 0 1-7.6 0V1"></path>
+                        <line x1="7.2" y1="1" x2="7.2" y2="23"></line>
+                        <path d="M15 23V1a5.7 5.7 0 0 1 5.7 5.7V13l-5.7 3"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Sazones del Mundo</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="Index.html" class="nav-link">Inicio</a>
+                <a href="Our_Story.html" class="nav-link">Nuestra historia</a>
+                <a href="Menu.html" class="nav-link">Menú</a>
+                <a href="Mission-Vision.html" class="nav-link">Misión y visión</a>
+                <a href="Reservations.html" class="nav-link active">Reservar mesa</a>
+                <a href="Contact.html" class="nav-link">Contacto</a>
+                <a href="Cart.html" class="btn-order">
+
+                    <span>Tu pedido</span>
+                    <span id="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="reserva-container">
+        <a href="Index.html" class="btn-volver">← Volver al inicio</a>
+
+        <h1>📅 Reservar una mesa</h1>
+
+        <!-- Formulario de reserva -->
+        <form id="formulario-reserva" class="seccion-reserva">
+            <h3>Datos de la reserva</h3>
+
+            <div class="grid-formulario">
+                <div>
+                    <label for="nombre-reserva">Nombre completo</label>
+                    <input type="text" id="nombre-reserva" required placeholder="Ej. Carlos Pérez">
+                </div>
+
+                <div>
+                    <label for="telefono-reserva">Teléfono / WhatsApp</label>
+                    <input type="tel" id="telefono-reserva" required pattern="[0-9 ]{10,}" title="Mínimo 10 dígitos" placeholder="Ej. 3001234567">
+                </div>
+
+                <div>
+                    <label for="email-reserva">Correo electrónico</label>
+                    <input type="email" id="email-reserva" required placeholder="correo@ejemplo.com">
+                </div>
+
+                <div>
+                    <label for="personas-reserva">Número de personas</label>
+                    <select id="personas-reserva" required>
+                        <option value="1">1 Persona</option>
+                        <option value="2" selected>2 Personas</option>
+                        <option value="3">3 Personas</option>
+                        <option value="4">4 Personas</option>
+                        <option value="5">5 Personas</option>
+                        <option value="6+">6 o más personas (Grupo)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="fecha-reserva">Fecha de la reserva</label>
+                    <input type="date" id="fecha-reserva" required>
+                </div>
+
+                <div>
+                    <label for="hora-reserva">Hora</label>
+                    <input type="time" id="hora-reserva" required>
+                </div>
+
+                <div class="campo-full">
+                    <label for="ocasion-reserva">Ocasión especial (opcional)</label>
+                    <select id="ocasion-reserva">
+                        <option value="Ninguna">Ninguna en particular</option>
+                        <option value="Cumpleaños">Cumpleaños</option>
+                        <option value="Aniversario">Aniversario</option>
+                        <option value="Cena de negocios">Cena de negocios</option>
+                        <option value="Otro">Otro motivo</option>
+                    </select>
+                </div>
+
+                <div class="campo-full">
+                    <label for="notas-reserva">Peticiones especiales o alergias (opcional)</label>
+                    <textarea id="notas-reserva" rows="3" placeholder="Ubicación preferida (terraza, interior), restricciones alimentarias, etc."></textarea>
+                </div>
+
+                <div class="campo-full info-reserva">
+                    📌 <strong>Nota:</strong> Guardaremos tu mesa durante 15 minutos tras la hora reservada. Te enviaremos una confirmación por WhatsApp o correo.
+                </div>
+            </div>
+
+            <div class="resumen">
+                <button type="submit" class="btn-reservar" id="btn-confirmar-reserva">
+                    Confirmar reserva
+                </button>
+            </div>
+        </form>
+
+        <!-- Mensaje de confirmación (oculto por defecto) -->
+        <div id="mensaje-exito" style="display: none; text-align: center; padding: 40px; background: #fff; border-radius: 20px; box-shadow: 0 4px 18px rgba(0,0,0,0.06); margin-top: 20px;">
+            <div style="font-size: 50px; margin-bottom: 15px;">🥂</div>
+            <h2 style="color: #631728; font-family: 'Playfair Display', serif; margin-bottom: 10px;">¡Reserva confirmada!</h2>
+            <p style="color: #555; margin-bottom: 20px;">Hemos recibido tu solicitud de reserva con éxito. Nos pondremos en contacto contigo pronto.</p>
+            <div id="resumen-reserva-detalles" style="text-align: left; background: #fdfbf7; padding: 20px; border-radius: 12px; font-size: 14px; margin-bottom: 20px; border: 1px solid #dfd1c3;"></div>
+            <a href="Index.html" style="display: inline-block; background: #631728; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold;">Volver al inicio</a>
+        </div>
+    </main>
+
+    <script src="reservations.js"></script>
+</body>
+</html>

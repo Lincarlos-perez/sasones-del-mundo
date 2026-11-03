@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión y Visión | Sazones del Mundo</title>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado / Navegación Estándar -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo completo -->
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" width="20" height="20">
+                        <path d="M11 1v6a3.8 3.8 0 0 1-7.6 0V1"></path>
+                        <line x1="7.2" y1="1" x2="7.2" y2="23"></line>
+                        <path d="M15 23V1a5.7 5.7 0 0 1 5.7 5.7V13l-5.7 3"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Sasones del Mundo</span>
+            </a>
+
+            <!-- Menú de Navegación completo -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="Our_Story.html" class="nav-link">Nuestra historia</a>
+                <a href="Menu.html" class="nav-link">Menú</a>
+                <a href="Mission-Vision.html" class="nav-link">Misión y visión</a>
+                <a href="Reservations.html" class="nav-link">Reservar mesa</a>
+                <a href="Contact.html" class="nav-link">Contacto</a>
+                
+                <!-- Botón Tu pedido con contador -->
+                <a href="Reservations.html" class="btn-order">
+                    <span>Tu pedido</span>
+                    <span id="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal: Misión y Visión -->
+    <main class="seccion-principal" style="padding: 40px 20px;">
+        <div class="contenedor-principal" style="display: block; max-width: 900px; margin: 0 auto; background: #fff; border-radius: 20px; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 50px;">
+        
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <span style="color: #631728; font-weight: 600; letter-spacing: 1px; font-size: 14px; text-transform: uppercase;">Lo que nos mueve</span>
+                <h1 style="color: #631728; font-family: 'Playfair Display', serif; font-size: 42px; line-height: 1.2;">Misión y Visión</h1>
+                
+                <div style="margin-top: 20px; display: grid; gap: 25px;">
+                    <div>
+                        <h3 style="color: #631728; font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Misión</h3>
+                        <p style="color: #555; font-size: 16px; line-height: 1.6;">Crear momentos de alegría alrededor de la mesa, cuidando cada ingrediente y honrando los sabores que nos enseñaron a querer.</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #631728; font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px;">Visión</h3>
+                        <p style="color: #555; font-size: 16px; line-height: 1.6;">Ser ese lugar al que siempre quieres volver: una cocina cercana, consciente y orgullosamente nuestra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="contenedor-footer">
+            <div class="footer-left">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" width="20" height="20">
+                            <path d="M11 1v6a3.8 3.8 0 0 1-7.6 0V1"></path>
+                            <line x1="7.2" y1="1" x2="7.2" y2="23"></line>
+                            <path d="M15 23V1a5.7 5.7 0 0 1 5.7 5.7V13l-5.7 3"></path>
+                        </svg>
+                    </div>
+                    <span class="footer-title">Sasones del Mundo</span>
+                </a>
+                <p class="footer-description">Cocina tradicional hecha con calma, ingredientes honestos y las recetas que nos reúnen alrededor de la mesa.</p>
+            </div>
+            <div class="footer-right">
+                <a href="Our_Story.html" class="footer-link">Conócenos</a>
+                <a href="Contact.html" class="footer-link">Contacto</a>
+                <a href="Menu.html" class="footer-link">Menú</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script único para mantener sincronizado el contador del carrito -->
+    <script src="menu.js"></script>
+</body>
+</html>

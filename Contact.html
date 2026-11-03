@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto|Sasones del Mundo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .contacto {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        .contacto-etiqueta {
+            color: #b86835;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .contacto h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            color: #631728;
+            margin: 15px 0;
+        }
+
+        .contacto-descripcion {
+            color: #555555;
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .contacto-contenedor {
+            display: flex;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .contacto-informacion,
+        .contacto-formulario {
+            flex: 1;
+            padding: 30px;
+            border-radius: 25px;
+        }
+
+        .contacto-informacion {
+            background-color: #631728;
+            color: #ffffff;
+        }
+
+        .contacto-informacion h2,
+        .contacto-formulario h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            margin-bottom: 25px;
+        }
+
+        .contacto-dato {
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .contacto-dato strong {
+            display: block;
+            color: #f2b47e;
+            margin-bottom: 5px;
+        }
+
+        .contacto-formulario {
+            background-color: #fffaf0;
+            border: 1px solid #e0d5cb;
+        }
+
+        .contacto-formulario h2 {
+            color: #631728;
+        }
+
+        .campo {
+            margin-bottom: 18px;
+        }
+
+        .campo label {
+            display: block;
+            color: #631728;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .campo input,
+        .campo textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d4c2b5;
+            border-radius: 10px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            background-color: #ffffff;
+        }
+
+        .campo textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .campo input:focus,
+        .campo textarea:focus {
+            outline: 2px solid #b86835;
+            border-color: transparent;
+        }
+
+        .btn-contacto {
+            background-color: #631728;
+            color: #ffffff;
+            border: none;
+            border-radius: 25px;
+            padding: 13px 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-contacto:hover {
+            background-color: #7b1d32;
+        }
+
+        .contacto-regreso {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .contacto-regreso a {
+            color: #631728;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contacto-regreso a:hover {
+            color: #b86835;
+        }
+
+        .contacto-frase {
+            margin-top: 35px;
+            text-align: center;
+            color: #631728;
+            font-family: 'Playfair Display', serif;
+            font-size: 21px;
+            font-style: italic;
+        }
+
+        @media (max-width: 750px) {
+            .contacto {
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            .contacto h1 {
+                font-size: 34px;
+            }
+
+            .contacto-contenedor {
+                flex-direction: column;
+            }
+
+            .contacto-regreso {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <span style="color: white;">♨</span>
+                </div>
+
+                <span class="logo-text">Sazones del Mundo</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="Index.html" class="nav-link">Inicio</a>
+                <a href="Our_Story.html" class="nav-link">Nuestra historia</a>
+                <a href="Menu.html" class="nav-link">Menú</a>
+                <a href="Mission-Vision.html" class="nav-link">Misión y visión</a>
+                <a href="Reservations.html" class="nav-link">Reservar mesa</a>
+                <a href="Contact.html" class="nav-link">Contacto</a>
+                <a href="Cart.html" class="btn-order">
+
+                    <span>Tu pedido</span>
+                    <span id="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="contacto">
+
+        <div class="contacto-regreso">
+            <a href="index.html">← Volver a inicio</a>
+            <a href="Menu.html">Ver menú →</a>
+        </div>
+
+        <span class="contacto-etiqueta">ESTAMOS PARA ATENDERTE</span>
+
+        <h1>¡Hablemos de buenos sabores!</h1>
+
+        <p class="contacto-descripcion">
+            En Sazones del Mundo nos encanta compartir la tradición de nuestra cocina
+            colombiana. Si tienes preguntas, quieres hacer un pedido o deseas conocernos
+            mejor, estaremos encantados de escucharte.
+        </p>
+
+        <div class="contacto-contenedor">
+
+            <section class="contacto-informacion">
+
+                <h2>Conectemos</h2>
+
+                <div class="contacto-dato">
+                    <strong>📍 Ubicación</strong>
+                    <span>Galapa,Colombia</span>
+                </div>
+
+                <div class="contacto-dato">
+                    <strong>📞 Teléfono</strong>
+                    <span>323591623</span>
+                </div>
+
+                <div class="contacto-dato">
+                    <strong>✉️ Correo electrónico</strong>
+                    <span>sasonesdelmundo@gmail.com</span>
+                </div>
+
+                <div class="contacto-dato">
+                    <strong>🍲 Nuestra esencia</strong>
+                    <span>
+                        Sabores tradicionales, ingredientes frescos y el cariño
+                        de la cocina hecha en casa.
+                    </span>
+                </div>
+
+            </section>
+
+            <section class="contacto-formulario">
+
+                <h2>Escríbenos</h2>
+
+                <form id="formulario-contacto">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre"
+                            placeholder="Escribe tu nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo"
+                            placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto"
+                            placeholder="¿En qué podemos ayudarte?" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Tu mensaje</label>
+                        <textarea id="mensaje" name="mensaje"
+                            placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-contacto">
+                        Enviar mensaje →
+                    </button>
+
+                    <p id="respuesta-contacto" role="status"
+                        style="margin-top: 15px; font-size: 14px;"></p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+        <p class="contacto-frase">
+            "Los mejores momentos se comparten alrededor de la mesa".
+        </p>
+
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+
+            <div class="footer-left">
+                <span class="footer-title">Sazones del Mundo</span>
+
+                <p class="footer-description">
+                    Cocina tradicional hecha con calma, ingredientes honestos
+                    y sabores que nos conectan con Colombia.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <a href="Our_Story.html" class="footer-link">Conócenos</a>
+                <a href="Contact.html" class="footer-link">Contacto</a>
+                <a href="Menu.html" class="footer-link">Menú</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script>
+        document.getElementById("formulario-contacto").addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            document.getElementById("respuesta-contacto").textContent =
+                "Gracias por escribirnos. El formulario es una demostración y tu mensaje todavía no se ha enviado.";
+
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
+    
